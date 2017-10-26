@@ -1,0 +1,24 @@
+{
+  "name": "MACwMP",
+  "version": "0.0.0",
+  "description": "Monadic array comprehension with meta programming in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo no test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utatti/MACwMP.git"
+  },
+  "keywords": [
+    "monad",
+    "array comprehension",
+    "meta programming"
+  ],
+  "author": "Hyunje Jun <me@noraesae.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utatti/MACwMP/issues"
+  },
+  "homepage": "https://github.com/utatti/MACwMP"
+}
