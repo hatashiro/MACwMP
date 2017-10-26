@@ -20,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/utatti/MACwMP/issues"
   },
-  "homepage": "https://github.com/utatti/MACwMP"
+  "homepage": "https://github.com/utatti/MACwMP",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@sweet-js/cli": "^3.0.13",
+    "@sweet-js/core": "git+https://github.com/utatti/sweet-core.git",
+    "@sweet-js/helpers": "^4.0.1",
+    "shift-codegen": "git+https://github.com/utatti/shift-codegen-js.git",
+    "shift-reducer": "git+https://github.com/utatti/shift-reducer-js.git"
+  }
 }
