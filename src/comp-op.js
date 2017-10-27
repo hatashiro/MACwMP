@@ -1,7 +1,6 @@
 'lang sweet.js';
 
 import { unwrap } from '@sweet-js/helpers' for syntax;
-import { async } from 'sweet-es7-async' for syntax;
 
 export operator $ prefix 19 = (ctx, right) => {
   const next = ctx.next().value;
