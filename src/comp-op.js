@@ -68,18 +68,6 @@ export operator $ prefix 19 = (ctx, right) => {
 
   syntax.comprehensions.push(currentComprehension);
 
-  const bindings = syntax.comprehensions.filter(c => c.type === 'bind')
-  let bindingDecls;
-  if (bindings.length > 0) {
-    bindingDecls= #`var `;
-    bindings.forEach(c => {
-      bindingDecls = bindingDecls.concat(#`${c.binding},`)
-    });
-    bindingDecls = bindingDecls.pop().concat(#`;`);
-  } else {
-    bindingDecls = #``;
-  }
-
   let body = #``;
   syntax.comprehensions.forEach(c => {
     if (c.type === 'guard')
@@ -88,16 +76,15 @@ if (!(${c.value})) return CArray.reject();
 `);
     else if (c.type === 'bind')
       body = body.concat(#`
-${c.binding} = await CArray.fromArray(${c.value});
+const ${c.binding} = await CArray.fromArray(${c.value}); if (false) { return }
 `);
   });
 
   return #`
 (() => {
   async function comp() {
-    ${bindingDecls}
     ${body}
-    return ${syntax.returnExpr};
+    return Promise.resolve(${syntax.returnExpr});
   }
   return runMonad(CArray, comp).xs;
 }())

@@ -24,12 +24,6 @@ class CArray {
   }
 
   then(fn) {
-    /* ignore this part! it's to workaround async-to-promises bug */
-    if (fn.toString() === 'function () {}') {
-      return this;
-    }
-    /* until here */
-
     let isMonadic = false;
 
     let result = this.xs.map(x => {
