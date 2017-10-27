@@ -32,6 +32,7 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-async-to-promises": "^1.0.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "shift-codegen": "git+https://github.com/utatti/shift-codegen-js.git",
     "shift-reducer": "git+https://github.com/utatti/shift-reducer-js.git"
   }
