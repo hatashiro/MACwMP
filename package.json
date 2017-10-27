@@ -4,7 +4,8 @@
   "description": "Monadic array comprehension with meta programming in JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo no test"
+    "test": "echo no test",
+    "build": "./scripts/build.sh"
   },
   "repository": {
     "type": "git",
